@@ -1,0 +1,166 @@
+.container{
+    height: 600px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d8b4fe;
+}
+
+
+
+.card-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:  center;
+}
+.card{
+    width: 350px;
+    height: 300px;
+    perspective: 1000px;
+    margin-bottom: 20px;
+}
+.card-face{
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease-in-out;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card .front{
+    transform: rotateY(0deg);
+}
+
+
+.card .back{
+    transform: rotateY(180deg);
+}
+
+.card.flipped .front{
+    transform: rotateY(-180deg);
+}
+.card.flipped .back{
+    transform: rotateY(0deg);
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+li{
+    background-color: #F3E8FF;
+    margin: 5px 0px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+li:hover{
+    background-color: #FBCFE8;
+
+}
+.selected{
+    background-color: #BBF7D0;
+    font-weight: bold;
+}
+
+.correct{
+    color:green;
+    font-size: 20px;
+    font-weight: bold;
+}
+.wrong{
+    color:red;
+    font-size: 20px;
+    font-weight: bold;
+}
+.navigation{
+    margin-top: 20px;
+    display:flex;
+    gap:15px;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*body{
+    background-color: #C8D0D2;
+    
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: .25rem;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .3);
+    background-color: white;
+    transform-style: preserve-3d;
+    height: 150px;
+    width: 150px;
+    transition: 150ms;
+    cursor: pointer;
+    transform:perspective(1000px) rotateY(var(--rotate-y, 0)) 
+    translateY(var(--translate-y, 0));
+}
+
+.card:hover {
+    --translate-y: -2px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .6);
+}
+
+.card.flip{
+    --rotate-y:180deg;
+}
+
+.card.front{
+    left: 0;
+}
+
+.card .front,
+.card .back{
+    position: absolute;
+    padding: 1rem;
+    backface-visibility: hidden;
+}
+
+.card .back {
+    transform: rotateY(180deg);
+}
+
+.flashcard-options{
+    margin-top: .5rem;
+}
+
+.flashcard-option{
+    margin-top: .10rem;
+    color: #555;
+    font-size: .75rem;
+}
+
+.flashcard-option:first-child{
+    margin-top: 0;
+}*/
